@@ -21,7 +21,7 @@
 ## Clone and Install Scripts
 
 ```
-wget -q -O sui_setup.sh https://raw.githubusercontent.com/NunoyHaxxana/SUI/main/sui.sh && chmod +x sui_setup.sh && sudo /bin/bash sui_setup.sh
+wget -q -O sui_setup.sh https://raw.githubusercontent.com/Contribution-DAO/sui-node-setup/main/sui.sh && chmod +x sui_setup.sh && sudo /bin/bash sui_setup.sh
 ```
 
 ## Verify your node running
