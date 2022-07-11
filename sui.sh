@@ -19,7 +19,7 @@ sudo apt update && sudo apt upgrade -y
 
 echo -e "\e[1m\e[32m2. Install dependencies \e[0m" && sleep 1
 sudo apt-get update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -y --no-install-recommends tzdata git ca-certificates curl build-essential libssl-dev pkg-config libclang-dev cmake jq
-
+sudo apt install libprotobuf-dev protobuf-compiler
 
 echo -e "\e[1m\e[32m3. Install Rust \e[0m" && sleep 1
 sudo curl https://sh.rustup.rs -sSf | sh -s -- -y
