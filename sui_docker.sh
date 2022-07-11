@@ -9,6 +9,15 @@ sudo rm /etc/systemd/system/suid.service
 sleep 3
 
 #New install via docker.
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh < "/dev/null"
+
+curl -SL https://github.com/docker/compose/releases/download/v2.5.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo chown $USER /var/run/docker.sock
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+
 cd $HOME
 sudo mkdir -p sui
 cd sui
