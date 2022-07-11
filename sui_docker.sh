@@ -1,4 +1,14 @@
 #!/bin/bash
+
+#Delete binary
+sudo systemctl stop suid
+sudo systemctl disable suid
+sudo rm -rf ~/sui /var/sui/
+sudo rm /etc/systemd/system/suid.service
+
+sleep 3
+
+#New install via docker.
 cd $HOME
 sudo mkdir -p sui
 cd sui
