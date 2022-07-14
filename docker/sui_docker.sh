@@ -13,14 +13,16 @@ echo "==========================================================================
 sleep 1
 
 #Delete binary
-sudo systemctl stop suid
-sudo systemctl disable suid
-sudo rm -rf ~/sui /var/sui/
-sudo rm /etc/systemd/system/suid.service
+#sudo systemctl stop suid
+#sudo systemctl disable suid
+#sudo rm -rf ~/sui /var/sui/
+#sudo rm /etc/systemd/system/suid.service
 
-sleep 1
+#sleep 1
 
 #New install via docker.
+sudo apt-get update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -y --no-install-recommends tzdata git ca-certificates curl build-essential libssl-dev pkg-config libclang-dev cmake jq
+
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh < "/dev/null"
 
