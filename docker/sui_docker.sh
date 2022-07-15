@@ -49,4 +49,4 @@ docker-compose up -d
 echo "==========================================================================================================================="    
 
 
-echo -e "Your Sui node \e[32minstalled and running normally\e[39m!"
+echo -e "Your Sui node \e[32minstalled \e[39m!"
