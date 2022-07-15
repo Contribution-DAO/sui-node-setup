@@ -49,4 +49,8 @@ docker-compose up -d
 echo "==========================================================================================================================="    
 
 
-echo -e "Your Sui node \e[32minstalled \e[39m!"
+if [ "$(docker ps -aq -f status=exited -f name=sui-fullnode-1)" ]; then
+echo -e "Your Sui node \e[31mwas failed installed\e[39m, Please Re-install."
+else
+echo -e "Your Sui node \e[32minstalled and running normally\e[39m!"
+fi
