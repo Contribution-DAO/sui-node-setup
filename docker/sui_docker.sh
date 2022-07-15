@@ -12,7 +12,7 @@ echo -e "\033[0;35m"
 echo "==========================================================================================================================="                                                                                    
 sleep 1
 
-Delete binary
+#Delete binary
 sudo systemctl stop suid
 sudo systemctl disable suid
 sudo rm -rf ~/sui /var/sui/
