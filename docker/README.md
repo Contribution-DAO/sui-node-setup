@@ -70,17 +70,22 @@ Send a request, the result should be something like this:
 
 ## Optional Command
 Check sui node log
+
 ```docker logs -f sui-fullnode-1 --tail 50 ```
 
 Restart sui node 
+
 ```docker-compose restart``` 
 
 Stop sui node 
+
 ```docker-compose stop```
 
 Start sui node 
+
 ```docker-compose start```
 
 Check sui node process
+
 ```docker ps -a```
 
