@@ -44,3 +44,9 @@ wget https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
 docker-compose down --volumes
 #docker network create sui-network
 docker-compose up -d
+
+
+echo "==========================================================================================================================="    
+
+
+echo -e "Your Sui node \e[32minstalled and running normally\e[39m!"
