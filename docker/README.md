@@ -68,3 +68,19 @@ Send a request, the result should be something like this:
 ![image](https://user-images.githubusercontent.com/83507970/178087112-e547a097-83ca-4ea7-aa35-82567a944b86.png)
 
 
+## Optional Command
+Check sui node log
+```docker logs -f sui-fullnode-1 --tail 50 ```
+
+Restart sui node 
+```docker-compose restart``` 
+
+Stop sui node 
+```docker-compose stop```
+
+Start sui node 
+```docker-compose start```
+
+Check sui node process
+```docker ps -a```
+
