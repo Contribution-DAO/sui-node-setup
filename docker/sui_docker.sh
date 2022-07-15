@@ -41,5 +41,6 @@ wget https://github.com/MystenLabs/sui/raw/main/crates/sui-config/data/fullnode-
 cp fullnode-template.yaml fullnode.yaml
 sudo sed -i 's/127.0.0.1/0.0.0.0/' fullnode.yaml
 wget https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
+docker-compose down --volumes
 docker network create sui-network
 docker-compose up -d
