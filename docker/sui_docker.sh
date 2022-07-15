@@ -36,20 +36,20 @@ cd $HOME
 sudo mkdir sui
 cd sui
 wget https://raw.githubusercontent.com/MystenLabs/sui/main/docker/fullnode/docker-compose.yaml
-sed -i 's/fullnode-template.yaml/fullnode.yaml/' docker-compose.yaml
+sudo sed -i 's/fullnode-template.yaml/fullnode.yaml/' docker-compose.yaml
 wget https://github.com/MystenLabs/sui/raw/main/crates/sui-config/data/fullnode-template.yaml
-cp fullnode-template.yaml fullnode.yaml
+sudo cp fullnode-template.yaml fullnode.yaml
 sudo sed -i 's/127.0.0.1/0.0.0.0/' fullnode.yaml
 wget https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
-docker-compose down --volumes
+sudo docker-compose down --volumes
 #docker network create sui-network
-docker-compose up -d
+sudo docker-compose up -d
 
 
 echo "==========================================================================================================================="    
 
 
-if [ "$(docker ps -aq -f status=exited -f name=sui-fullnode-1)" ]; then
+if [ "$(sudo docker ps -aq -f status=exited -f name=sui-fullnode-1)" ]; then
 echo -e "Your Sui node \e[31mwas failed installed\e[39m, Please Re-install."
 else
 echo -e "Your Sui node \e[32minstalled and running normally\e[39m!"
