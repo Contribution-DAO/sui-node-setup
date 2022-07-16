@@ -18,7 +18,7 @@
 
 
 # Set up Sui full node with auto script.
-## 1. switch to super user
+## 1. Switch to root user
 
 ```
 sudo su
