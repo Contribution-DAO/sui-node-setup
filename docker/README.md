@@ -62,7 +62,7 @@ Send a request, the result should be something like this:
 1) Go to  https://node.sui.zvalid.com/
 2) Insert your node ip
 
-Send a request, the result should be something like this:
+Click connect, the result should be something like this:
 ![image](https://user-images.githubusercontent.com/83507970/178087112-e547a097-83ca-4ea7-aa35-82567a944b86.png)
 
 
