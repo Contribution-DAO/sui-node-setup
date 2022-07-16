@@ -58,7 +58,7 @@ Send a request, the result should be something like this:
 ```
 
 
-## Monitor your node health status
+## 4. Monitor your node health status
 1) Go to  https://node.sui.zvalid.com/
 2) Insert your node ip
 
@@ -67,7 +67,7 @@ Click connect, the result should be something like this:
 
 
 
-## Register your node on discord
+## 5. Register your node on discord
 After fisnish install Sui node, You have register your node in the [Sui Discord](https://discord.gg/kqfQbYjUGq):
 1) Go to Channel `#📋node-ip-application` 
 2) Post your node ```http://<YOUR_NODE_IP>:9000/ ``` in Channel.
