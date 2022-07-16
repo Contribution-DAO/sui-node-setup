@@ -52,6 +52,15 @@ Send a request, the result should be something like this:
 ```
 
 
+## Monitor your node health status
+1) Go to  https://node.sui.zvalid.com/
+2) Insert your node ip
+
+Send a request, the result should be something like this:
+![image](https://user-images.githubusercontent.com/83507970/178087112-e547a097-83ca-4ea7-aa35-82567a944b86.png)
+
+
+
 ## Register your node on discord
 After fisnish install Sui node, You have register your node in the [Sui Discord](https://discord.gg/kqfQbYjUGq):
 1) Go to Channel `#📋node-ip-application` 
@@ -60,12 +69,7 @@ After fisnish install Sui node, You have register your node in the [Sui Discord]
 
 
 
-## Monitor your node health status
-1) Go to  https://node.sui.zvalid.com/
-2) Insert your node ip
 
-Send a request, the result should be something like this:
-![image](https://user-images.githubusercontent.com/83507970/178087112-e547a097-83ca-4ea7-aa35-82567a944b86.png)
 
 
 ## Optional Command
