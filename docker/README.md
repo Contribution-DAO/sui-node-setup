@@ -18,7 +18,13 @@
 
 
 # Set up Sui full node with auto script.
-## Clone and Install Scripts
+## 1. switch to super user
+
+```
+sudo su
+```
+
+## 2. Clone and Install Scripts
 
 ```
 wget -q -O sui_setup.sh https://raw.githubusercontent.com/Contribution-DAO/sui-node-setup/main/docker/sui_docker.sh && chmod +x sui_setup.sh && sudo /bin/bash sui_setup.sh
@@ -27,7 +33,7 @@ wget -q -O sui_setup.sh https://raw.githubusercontent.com/Contribution-DAO/sui-n
 
 
 
-## Check Node Status 
+## 3. Check Node Status 
 ```
 curl -s -X POST http://127.0.0.1:9000 -H 'Content-Type: application/json' -d '{ "jsonrpc":"2.0", "method":"rpc.discover","id":1}' | jq .result.info
 ```
