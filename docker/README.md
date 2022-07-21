@@ -74,7 +74,11 @@ After fisnish install Sui node, You have register your node in the [Sui Discord]
 ![image](https://user-images.githubusercontent.com/83507970/178087432-d8449b38-1f6a-4510-a31e-a85ea61b37e1.png)
 
 
+## 6. Update sui node.
 
+```
+wget -q -O sui_update.sh https://raw.githubusercontent.com/Contribution-DAO/sui-node-setup/main/docker/update.sh && chmod +x sui_update.sh && sudo /bin/bash sui_update.sh
+```
 
 
 
