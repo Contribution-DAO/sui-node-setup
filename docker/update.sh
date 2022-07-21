@@ -42,5 +42,5 @@ if [ $result = "running" ]
 then
 echo -e "Your Sui node \e[32mUpdate and running normally\e[39m!"
 else
-echo -e "Your Sui node \e[31mUpdate failed installed\e[39m, Please Re-install."
+echo -e "Your Sui node \e[31mUpdate failed\e[39m, Please Re-install."
 fi
