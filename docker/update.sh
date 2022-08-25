@@ -18,18 +18,15 @@ echo -e "\e[1m\e[32mUpdating Sui fullnode... \e[0m" && sleep 1
 
 cd $HOME/sui
 sudo docker-compose down --volumes
-cd $HOME && sudo rm -rf sui
-sudo mkdir sui && cd sui
+rm genesis.blob
+wget https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
 wget https://raw.githubusercontent.com/MystenLabs/sui/main/docker/fullnode/docker-compose.yaml
 wget https://github.com/MystenLabs/sui/raw/main/crates/sui-config/data/fullnode-template.yaml
-wget https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
 sudo cp fullnode-template.yaml fullnode.yaml
 sudo sed -i 's/127.0.0.1/0.0.0.0/' fullnode.yaml
 sudo sed -i 's/fullnode-template.yaml/fullnode.yaml/' docker-compose.yaml
-docker-compose pull
+docker rmi mysten/sui-node:stable
 docker-compose up -d
-
-
 
 
 
