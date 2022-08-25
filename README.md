@@ -104,6 +104,6 @@ Delete sui node
 ```
 sudo systemctl stop suid
 sudo systemctl disable suid
-sudo rm -rf ~/sui /var/sui/
+sudo rm -rf $HOME/sui_node
 sudo rm /etc/systemd/system/suid.service
 ```
