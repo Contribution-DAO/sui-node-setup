@@ -43,14 +43,17 @@ sudo apt install libprotobuf-dev protobuf-compiler
 #sudo sed -i 's/genesis.blob/\/var\/sui\/genesis.blob/' /var/sui/fullnode.yaml
 
 echo -e "\e[1m\e[32m3. Update Configs \e[0m" && sleep 1
-cd $HOME 
-sudo mkdir -p sui_node
+mkdir -p $HOME/sui_node
 cd $HOME/sui_node
 wget -O genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
 wget -O fullnode.yaml https://github.com/MystenLabs/sui/raw/main/crates/sui-config/data/fullnode-template.yaml
-sudo sed -i 's/suidb/\$HOME\/sui_node\/db/'  $HOME/sui_node/fullnode.yaml
 sudo sed -i 's/127.0.0.1/0.0.0.0/'  $HOME/sui_node/fullnode.yaml
-sudo sed -i 's/genesis.blob/\$HOME\/sui_node\/genesis.blob/' $HOME/sui_node/fullnode.yaml
+sudo yq -i ".genesis.genesis-file-location = \"$HOME/sui_node/genesis.blob\"" $HOME/sui_node/fullnode.yaml
+sudo yq -i ".db-path = \"$HOME/sui_node/db\"" $HOME/sui_node/fullnode.yaml
+
+
+
+
 
 
 echo -e "\e[1m\e[32m4. Download Sui Binaries \e[0m" && sleep 1
