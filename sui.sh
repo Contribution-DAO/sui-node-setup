@@ -48,6 +48,7 @@ cd $HOME/sui_node
 wget -O genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
 wget -O fullnode.yaml https://github.com/MystenLabs/sui/raw/main/crates/sui-config/data/fullnode-template.yaml
 sudo sed -i 's/127.0.0.1/0.0.0.0/'  $HOME/sui_node/fullnode.yaml
+sudo yq -i '.network-address = "/ip4/0.0.0.0/tcp/8080/http"' $HOME/sui_node/fullnode.yaml
 sudo yq -i ".genesis.genesis-file-location = \"$HOME/sui_node/genesis.blob\"" $HOME/sui_node/fullnode.yaml
 sudo yq -i ".db-path = \"$HOME/sui_node/db\"" $HOME/sui_node/fullnode.yaml
 
