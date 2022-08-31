@@ -107,3 +107,11 @@ sudo systemctl disable suid
 sudo rm -rf $HOME/sui_node
 sudo rm /etc/systemd/system/suid.service
 ```
+
+# Update Sui full node with auto script.
+## Clone and Install Scripts
+
+```
+wget -q -O sui_update.sh https://raw.githubusercontent.com/Contribution-DAO/sui-node-setup/main/sui_update.sh && chmod +x sui_update.sh && sudo /bin/bash sui_update.sh
+```
+
