@@ -79,7 +79,7 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 
-sudo systemctl restart systemd-journald
+#sudo systemctl restart systemd-journald
 sudo systemctl daemon-reload
 sudo systemctl enable suid
 sudo systemctl restart suid
