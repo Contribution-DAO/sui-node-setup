@@ -26,10 +26,9 @@ cd $HOME/sui_node
 sudo rm -rf $HOME/sui_node/db
 wget -O genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
 wget -O fullnode.yaml https://github.com/MystenLabs/sui/raw/main/crates/sui-config/data/fullnode-template.yaml
-sudo sed -i 's/127.0.0.1/0.0.0.0/'  $HOME/sui_node/fullnode.yaml
-sudo sed -i 's/dns\/localhost/ip4\/0.0.0.0/g' $HOME/sui_node/fullnode.yaml
-sudo sed -i 's/genesis.blob/$HOME\/sui_node\/genesis.blob/g' $HOME/sui_node/fullnode.yaml
-sudo sed -i 's/suidb/$HOME\/sui_node\/db\//g' $HOME/sui_node/fullnode.yaml
+sed -i 's/127.0.0.1/0.0.0.0/'  $HOME/sui_node/fullnode.yaml
+sed -i "s|db-path:.*|db-path: $HOME/sui_node/db|g" $HOME/sui_node/fullnode.yaml
+sed -i "s|genesis-file-location:.*|genesis-file-location: $HOME/sui_node/genesis.blob|g" $HOME/sui_node/fullnode.yaml
 version=$(wget -qO- https://api.github.com/repos/SecorD0/Sui/releases/latest | jq -r ".tag_name")
 wget -qO- "https://github.com/SecorD0/Sui/releases/download/${version}/sui-linux-amd64-${version}.tar.gz" | sudo tar -C /usr/local/bin/ -xzf -
 sudo systemctl start suid
