@@ -20,6 +20,16 @@
 # Set up Sui full node with auto script.
 ## Clone and Install Scripts
 
+### TESTNET
+
+```
+wget -q -O sui_testnet.sh https://raw.githubusercontent.com/Contribution-DAO/sui-node-setup/main/sui_testnet.sh && chmod +x sui_testnet.sh && sudo /bin/bash sui_testnet.sh
+```
+
+
+
+### DEVNET
+
 ```
 wget -q -O sui_setup.sh https://raw.githubusercontent.com/Contribution-DAO/sui-node-setup/main/sui.sh && chmod +x sui_setup.sh && sudo /bin/bash sui_setup.sh
 ```
