@@ -47,40 +47,31 @@ Send a request, the result should be something like this:
 curl -s -X POST http://127.0.0.1:9000 -H 'Content-Type: application/json' -d '{ "jsonrpc":"2.0", "method":"rpc.discover","id":1}' | jq .result.info
 ```
 
+## Check the latest TX on your node
+```
+curl -s -X POST http://127.0.0.1:9000 -H 'Content-Type: application/json'   --data-raw '{ "jsonrpc":"2.0", "method":"sui_getTotalTransactionNumber","id":1}' | jq 
+```
 
-Send a request, the result should be something like this:
-```json
-{
-  "title": "Sui JSON-RPC",
-  "description": "Sui JSON-RPC API for interaction with the Sui network gateway.",
-  "contact": {
-    "name": "Mysten Labs",
-    "url": "https://mystenlabs.com",
-    "email": "build@mystenlabs.com"
-  },
-  "license": {
-    "name": "Apache-2.0",
-    "url": "https://raw.githubusercontent.com/MystenLabs/sui/main/LICENSE"
-  },
-  "version": "0.1.0"
-}
+## Check the latest TX on testnet chain 
+```
+curl -s -X POST https://fullnode.testnet.sui.io:443 --header 'Content-Type: application/json' --data-raw '{ "jsonrpc":"2.0", "method":"sui_getTotalTransactionNumber","id":1}' | jq 
+```
+
+## Check the latest TX on devnet chain 
+```
+curl -s -X POST https://fullnode.devnet.sui.io:443 --header 'Content-Type: application/json' --data-raw '{ "jsonrpc":"2.0", "method":"sui_getTotalTransactionNumber","id":1}' | jq 
 ```
 
 
-## Register your node on discord
-After fisnish install Sui node, You have register your node in the [Sui Discord](https://discord.gg/kqfQbYjUGq):
-1) Go to Channel `#📋node-ip-application` 
-2) Post your node ```http://<YOUR_NODE_IP>:9000/ ``` in Channel.
-![image](https://user-images.githubusercontent.com/83507970/178087432-d8449b38-1f6a-4510-a31e-a85ea61b37e1.png)
 
 
 
 ## Monitor your node health status
-1) Go to  https://node.sui.zvalid.com/
+1) Go to  [https://node.sui.zvalid.com/](https://www.scale3labs.com/check/sui)
 2) Insert your node ip
 
 Send a request, the result should be something like this:
-![image](https://user-images.githubusercontent.com/83507970/178087112-e547a097-83ca-4ea7-aa35-82567a944b86.png)
+![image](https://user-images.githubusercontent.com/83507970/214762796-528f77c1-1448-43a8-8169-c37b9dd3be8f.png)
 
 
 ## Optional Command
