@@ -31,7 +31,7 @@ wget -q -O sui_testnet.sh https://raw.githubusercontent.com/Contribution-DAO/sui
 ### DEVNET
 
 ```
-wget -q -O sui_setup.sh https://raw.githubusercontent.com/Contribution-DAO/sui-node-setup/main/sui.sh && chmod +x sui_setup.sh && sudo /bin/bash sui_setup.sh
+wget -q -O sui_devnet.sh https://raw.githubusercontent.com/Contribution-DAO/sui-node-setup/main/sui_devnet.sh && chmod +x sui_devnet.sh && sudo /bin/bash sui_devnet.sh
 ```
 
 ## Verify your node running
@@ -121,7 +121,17 @@ sudo rm /etc/systemd/system/suid.service
 # Update Sui full node with auto script.
 ## Clone and Install Scripts
 
+### TESTNET
+
 ```
-wget -q -O sui_update.sh https://raw.githubusercontent.com/Contribution-DAO/sui-node-setup/main/sui_update.sh && chmod +x sui_update.sh && sudo /bin/bash sui_update.sh
+wget -q -O sui_testnet_update.sh https://raw.githubusercontent.com/Contribution-DAO/sui-node-setup/main/sui_testnet_update.sh && chmod +x sui_testnet_update.sh && sudo /bin/bash sui_testnet_update.sh
+```
+
+
+
+### DEVNET
+
+```
+wget -q -O sui_devnet_update.sh https://raw.githubusercontent.com/Contribution-DAO/sui-node-setup/main/sui_devnet_update.sh && chmod +x sui_devnet_update.sh && sudo /bin/bash sui_devnet_update.sh
 ```
 
