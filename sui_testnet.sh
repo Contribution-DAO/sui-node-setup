@@ -89,8 +89,11 @@ else
   echo -e "Your Sui node \e[31mwas failed installed\e[39m, Please Re-install."
 fi
 
-echo -e '\e[32m "Sui Version" \e[39m' : sui-node -V && sui -V
-
+echo " "
+echo -e "\e[1m\e[34mYour Sui Version : $(sui -V)\e[0m" && sleep 1
+echo " "
+echo " "
+echo " "
 echo -e "\e[1m\e[32m6. Usefull commands \e[0m" && sleep 1
 echo -e "Check your node logs: \e[1m\e[32m journalctl -fu suid -o cat \e[0m"
 echo -e "Check your node status: \e[1m\e[32m sudo service suid status \e[0m"
