@@ -78,10 +78,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable suid
 sudo systemctl restart suid
 
-#sudo systemctl restart systemd-journald
-sudo systemctl daemon-reload
-sudo systemctl enable suid
-sudo systemctl restart suid
 
 
 
