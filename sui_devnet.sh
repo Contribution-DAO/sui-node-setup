@@ -64,7 +64,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which sui-node) --config-path $HOME/.sui/fullnode.yaml
+ExecStart=/usr/local/bin/sui-node --config-path $HOME/.sui/fullnode.yaml
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
@@ -72,6 +72,11 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+
+
+sudo systemctl daemon-reload
+sudo systemctl enable suid
+sudo systemctl restart suid
 
 #sudo systemctl restart systemd-journald
 sudo systemctl daemon-reload
