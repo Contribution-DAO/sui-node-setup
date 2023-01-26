@@ -64,7 +64,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which sui-node) --config-path $HOME/sui_node/fullnode.yaml
+ExecStart=$(which sui-node) --config-path $HOME/.sui/fullnode.yaml
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
