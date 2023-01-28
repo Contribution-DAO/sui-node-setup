@@ -20,6 +20,8 @@ sudo apt update && sudo apt upgrade -y
 echo -e "\e[1m\e[32m2. Install dependencies \e[0m" && sleep 1
 sudo apt-get update && DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -y --no-install-recommends tzdata git ca-certificates curl build-essential libssl-dev pkg-config libclang-dev cmake jq
 sudo apt install libprotobuf-dev protobuf-compiler
+wget http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
 
 echo -e "\e[1m\e[32m3. Install Rust \e[0m" && sleep 1
 sudo curl https://sh.rustup.rs -sSf | sh -s -- -y
