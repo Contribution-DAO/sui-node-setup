@@ -77,6 +77,13 @@ WantedBy=multi-user.target
 EOF
 
 
+sudo tee <<EOF >/dev/null /etc/systemd/journald.conf
+Storage=persistent
+EOF
+
+
+
+
 sudo systemctl daemon-reload
 sudo systemctl enable suid
 sudo systemctl restart suid
