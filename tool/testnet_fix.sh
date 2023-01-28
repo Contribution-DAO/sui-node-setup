@@ -90,7 +90,7 @@ else
 fi
 
 echo " "
-echo -e "\e[1m\e[34mYour Sui Version : $(sui -V)\e[0m" && sleep 1
+echo -e "\e[1m\e[34mYour Sui Version : $(/usr/local/bin/sui-node -V)\e[0m" && sleep 1
 echo " "
 echo " "
 echo " "
