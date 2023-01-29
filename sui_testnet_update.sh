@@ -17,31 +17,21 @@ sleep 1
 
 
 echo -e "\e[1m\e[32m Update Sui fullnode \e[0m" && sleep 1
-
-
-cd $HOME
-#sudo systemctl stop suid
-#rm -rf sui
-#git clone https://github.com/MystenLabs/sui.git
-#cd sui
-#git remote add upstream https://github.com/MystenLabs/sui
-#git fetch upstream
-#git checkout -B testnet --track upstream/testnet
-#cargo build -p sui-node -p sui --release
-#mv ~/sui/target/release/sui-node /usr/local/bin/
-#mv ~/sui/target/release/sui /usr/local/bin/
+source $HOME/.cargo/env
 
 cd $HOME
+sudo systemctl stop suid
 rm -rf sui
 git clone https://github.com/MystenLabs/sui.git
 cd sui
 git remote add upstream https://github.com/MystenLabs/sui
 git fetch upstream
 git checkout -B testnet --track upstream/testnet
-
-cargo build --release
+cargo build -p sui-node -p sui --release
 mv ~/sui/target/release/sui-node /usr/local/bin/
 mv ~/sui/target/release/sui /usr/local/bin/
+
+
 
 
 rm -rf $HOME/.sui/db
