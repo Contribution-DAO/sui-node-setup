@@ -17,7 +17,7 @@ sleep 1
 
 
 echo -e "\e[1m\e[32m Update Sui fullnode \e[0m" && sleep 1
-
+source $HOME/.cargo/env
 
 cd $HOME
 sudo systemctl stop suid
