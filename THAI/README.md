@@ -52,7 +52,7 @@ service suid status
 curl -s -X POST http://127.0.0.1:9000 -H 'Content-Type: application/json' -d '{ "jsonrpc":"2.0", "method":"rpc.discover","id":1}' | jq .result.info
 ```
 
-## ตรวจสอบการ sync ของโดนเรา ว่า sync ได้กี่ tx แล้ว
+## ตรวจสอบการ sync ของโหนดเรา ว่า sync ได้กี่ tx แล้ว
 ```
 curl -s -X POST http://127.0.0.1:9000 -H 'Content-Type: application/json'   --data-raw '{ "jsonrpc":"2.0", "method":"sui_getTotalTransactionNumber","id":1}' | jq 
 ```
