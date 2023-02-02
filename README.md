@@ -2,9 +2,9 @@
 
 ### Sui Node Requirements
 >:black_square_button: OS Ubuntu 18.04 or 20.04 <br>
->:black_square_button: 2 CPUs<br>
->:black_square_button: 8GB RAM<br>
->:black_square_button: 50GB Storage<br>
+>:black_square_button: 10 CPUs<br>
+>:black_square_button: 32GB RAM<br>
+>:black_square_button: 1000GB Storage<br>
 >:black_square_button: Port 9000, 9184<br>
 >:black_square_button: Need Super user or root for run this script.<br>
 
