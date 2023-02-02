@@ -34,7 +34,7 @@ mv ~/sui/target/release/sui /usr/local/bin/
 
 
 
-rm -rf $HOME/.sui/db
+#rm -rf $HOME/.sui/db
 
 
 
