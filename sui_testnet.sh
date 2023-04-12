@@ -50,7 +50,7 @@ echo -e "\e[1m\e[32m3. Update Configs \e[0m" && sleep 1
 mkdir -p $HOME/.sui/
 cd $HOME/.sui/
 wget -O genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/testnet/genesis.blob
-wget -O fullnode.yaml https://github.com/MystenLabs/sui/raw/main/crates/sui-config/data/fullnode-template.yaml
+cp $HOME/sui/crates/sui-config/data/fullnode-template.yaml $HOME/.sui/fullnode.yaml
 sed -i 's/127.0.0.1/0.0.0.0/'  $HOME/.sui/fullnode.yaml
 sed -i "s|db-path:.*|db-path: $HOME/.sui/db|g" $HOME/.sui/fullnode.yaml
 sed -i "s|genesis-file-location:.*|genesis-file-location: $HOME/.sui/genesis.blob|g" $HOME/.sui/fullnode.yaml
@@ -59,44 +59,20 @@ sudo tee -a $HOME/.sui/fullnode.yaml  >/dev/null <<EOF
 
 p2p-config:
   seed-peers:
-   - address: "/dns/seoul-1.sui.nodiums.com/udp/9999"
-   - address: "/dns/seoul-2.sui.nodiums.com/udp/9999"
-   - address: "/dns/singapore-1.sui.nodiums.com/udp/9999"
-   - address: "/dns/singapore-2.sui.nodiums.com/udp/9999"
-   - address: "/dns/singapore-3.sui.nodiums.com/udp/9999"
-   - address: "/dns/singapore-4.sui.nodiums.com/udp/9999"
-   - address: "/dns/toronto-1.sui.nodiums.com/udp/9999"
-   - address: "/dns/mumbai-1.sui.nodiums.com/udp/9999"
-   - address: "/dns/los-angeles-1.sui.nodiums.com/udp/9999"
-   - address: "/dns/dallas-1.sui.nodiums.com/udp/9999"
-   - address: "/ip4/65.109.32.171/udp/8084"
-   - address: "/ip4/65.108.44.149/udp/8084"
-   - address: "/ip4/95.214.54.28/udp/8080"
-   - address: "/ip4/136.243.40.38/udp/8080"
-   - address: "/ip4/84.46.255.11/udp/8084"
-   - address: "/ip4/135.181.6.243/udp/8088"
-   - address: "/ip4/89.163.132.44/udp/8080"
-   - address: "/ip4/95.217.57.232/udp/8080"
-   - address: "/ip4/15.204.163.225/udp/8080"
-   - address: "/ip4/65.108.68.119/udp/8080"
-   - address: "/ip4/155.133.22.151/udp/8080"
-   - address: "/ip4/45.14.194.21/udp/8080"
-   - address: "/ip4/159.69.58.44/udp/8080"
-   - address: "/ip4/139.180.130.95/udp/8084"
-   - address: "/ip4/51.178.73.193/udp/8084"
-   - address: "/ip4/162.19.84.43/udp/8084"
-   - address: "/ip4/146.59.68.207/udp/8080"
-   - address: "/ip4/89.58.5.19/udp/8084"
-   - address: "/ip4/38.242.227.80/udp/8080"
-   - address: "/ip4/144.217.10.44/udp/8080"
+   - address: "/dns/sui-rpc-pt.testnet-pride.com/udp/8084"
+     peer-id: 0b10182585ae4a305721b1823ea5a9c3ce7d6ac4b4a8ce35fe96d9914c8fcb73
+   - address: "/dns/sui-rpc-pt2.testnet-pride.com/udp/8084"
+     peer-id: bf45f2bd2bbc4c2d53d10c05c96085d4ef18688af04649d6e65e1ebad1716804
+   - address: "/dns/sui-rpc-testnet.bartestnet.com/udp/8084"
+   - address: "/ip4/38.242.197.20/udp/8080"
    - address: "/ip4/178.18.250.62/udp/8080"
-   - address: "/ip4/213.239.215.119/udp/8084"
-   - address: "/ip4/65.109.32.171/udp/8084"
-   - address: "/ip4/65.108.44.149/udp/8084"
-   - address: "/ip4/95.214.54.28/udp/8080"
-   - address: "/ip4/136.243.40.38/udp/8080"
-   - address: "/ip4/84.46.255.11/udp/8084"
-   - address: "/ip4/135.181.6.243/udp/8088"
+   - address: "/ip4/162.55.84.47/udp/8084"
+   - address: "/dns/wave-3.testnet.n1stake.com/udp/8084"
+   - address: "/ip4/46.4.119.19/udp/8084"
+   - address: "/ip4/89.58.5.19/udp/8084"
+   - address: "/dns/sui-testnet.fort.software/udp/8080"
+   - address: "/ip4/207.180.201.73/udp/8084"
+   - address: "/ip4/65.109.108.186/udp/8084"
 EOF
 
 
